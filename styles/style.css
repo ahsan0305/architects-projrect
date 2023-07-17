@@ -60,7 +60,7 @@ nav li a{
     color: #424242;
     text-decoration: none;
 }
-.title, .fact-title{
+.title, .fact-title, .sponsor-title, .feature-title{
     color: var(--dark-01, #131313);
     font-size: 45px;
     font-weight: 700;
@@ -79,7 +79,7 @@ nav li a{
     font-weight: 700;
     line-height: normal;
 }
-.banner-description{
+.banner-description, .sponsor-description, .feature-description{
     color: var(--dark-03, #727272);
     text-align: center;
     font-size: 16px;
@@ -95,6 +95,63 @@ nav li a{
 
 /* header style finish  */
 
+/* feature style start  */
+.features{
+    margin: 130px;
+    display: flex;
+    justify-content:space-around;
+    gap: 140px;
+}
+.title-card{
+    color: var(--dark-01, #131313);
+    font-size: 20px;
+    font-weight: 600;
+}
+.description-card{
+    color: var(--dark-03, #727272);
+    font-size: 16px;
+    font-weight: 400;
+}
+.feature-content .card{
+    padding: 30px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    background: #FFF;
+    box-shadow: 0px 4px 30px 0px rgba(0, 0, 0, 0.06);
+}
+.ten-years-badge{
+    border-radius: 8px;
+    background: #FF900E;
+    color: white;
+    width: 342px;
+    height: 110px;
+    flex-shrink: 0;
+    padding: 40px;
+    text-align: center;
+    position: relative;
+    bottom: 100px;
+    right: 100px;
+}
+.feature-img{
+    height: 90%;
+    margin-left: 50px;
+}
+
+.ten-years-badge h3{
+    text-align: center;
+    font-size: 65px;
+    font-weight: 700;
+    margin: 0;
+}
+.ten-years-badge p{
+    font-size: 25px; 
+}
+.feature .feature-title{
+    border-left: 5px solid #FF900E;
+    padding-left: 20px; 
+}
+
+
 /* teams section style start  */
 .teams-container{
     display: flex;
@@ -106,9 +163,9 @@ nav li a{
     grid-template-columns: repeat(2, 1fr);
     gap: 1.5rem;
 }
-.teams-ex-content{
-    padding-right: 85px;
-    padding-left: 85px;
+.teams-ex-content, .fact-card-container{
+    padding-right: 25px;
+    padding-left: 25px;
 }
 .teams-title{
     color: var(--dark-03, #727272);
@@ -129,6 +186,7 @@ nav li a{
     align-items: center;
     justify-content: space-around;
     text-align: center;
+    gap: 20px;
 }
 .fact-card-container .card{
     border-radius: 8px;
@@ -150,6 +208,37 @@ nav li a{
     font-weight: 600;
 }
 
+/* sponsor style start  */
+.sponsors{
+    text-align: center;
+}
+.sponsor-img{
+    justify-content: space-evenly;
+    margin-top: 50px;
+    display: flex;
+    gap: 40px;
+    align-items: center;
+}
+.sponsor-img img{
+    width: 160px;
+    height: 55px;
+}
+.footer{
+    border-radius: 8px;
+    background: #FFF4E7;
+    width: 1440px;
+    height: 100px;
+    margin: 30px 240px 216px;
+}
+.footer-details{
+    color: var(--dark-02, #424242);
+    text-align: center;
+    font-size: 20px;
+    font-weight: 400;
+    align-items: center;
+    padding: 38px 410px;
+}
+
 
 
 /* responsive media queries  */
@@ -158,7 +247,9 @@ nav li a{
         padding: 20px;
     }
     nav,
-    .teams-container
+    .teams-container,
+    .fact-card-container,
+    .sponsor-img
     {
         flex-direction: column;
     }
@@ -176,7 +267,8 @@ nav li a{
         padding: 50px;
     }
     nav,
-    .teams-container{
+    .teams-container
+    {
         flex-direction: column;
     } 
 }
