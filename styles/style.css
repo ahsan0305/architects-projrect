@@ -60,7 +60,7 @@ nav li a{
     color: #424242;
     text-decoration: none;
 }
-.title{
+.title, .fact-title{
     color: var(--dark-01, #131313);
     font-size: 45px;
     font-weight: 700;
@@ -79,36 +79,27 @@ nav li a{
     font-weight: 700;
     line-height: normal;
 }
+.banner-description{
+    color: var(--dark-03, #727272);
+    text-align: center;
+    font-size: 16px;
+    font-weight: 400;
+    padding-bottom: 35px;
+
+}
 .banner-pic{
     width: 100%;
     margin-top: 20px;
+    padding-top: 40px;
 }
 
-/* responsive media queries  */
-@media screen and (max-width: 576px) {
-    header{
-        padding: 20px;
-    }
-    nav{
-        flex-direction: column;
-    }
-    
-}
-@media screen and (min-width:576px) and (max-width:960px) { 
-    header{
-        padding: 50px;
-    }
-    nav{
-        flex-direction: column;
-    } 
-}
 /* header style finish  */
 
 /* teams section style start  */
 .teams-container{
     display: flex;
     align-items:center ;
-    padding-top: 50px;
+    padding-top: 80px;
 }
 .teams-img-content{
     display: grid;
@@ -125,9 +116,67 @@ nav li a{
     font-weight: 500;
     padding-bottom: 24px;
 }
-.teams-description{
+.teams-description, .fact-description{
     color: var(--dark-03, #727272);
     font-size: 16px;
     font-weight: 400;
     padding-bottom: 32px;
+}
+
+/* facts style start  */
+.fact-card-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    text-align: center;
+}
+.fact-card-container .card{
+    border-radius: 8px;
+    border: 1px solid #FF900E;
+    text-align: center;
+    padding: 30px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+.fact-card-container .card-stats{
+    color: #424242;
+    font-size: 45px;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+.fact-card-container .card-title{
+    color: #424242;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+
+
+/* responsive media queries  */
+@media screen and (max-width: 576px) {
+    header{
+        padding: 20px;
+    }
+    nav,
+    .teams-container
+    {
+        flex-direction: column;
+    }
+    .teams-img-content{
+        grid-template-columns: 1fr;
+    }
+    .teams-ex-content{
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    
+}
+@media screen and (min-width:576px) and (max-width:960px) { 
+    header{
+        padding: 50px;
+    }
+    nav,
+    .teams-container{
+        flex-direction: column;
+    } 
 }
